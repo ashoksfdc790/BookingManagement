@@ -1,0 +1,54 @@
+<template>
+    <lightning-card title="Bookings">
+
+        <!-- FILTER SECTION -->
+        <div class="slds-p-around_medium slds-grid slds-gutters">
+
+            <div class="slds-col">
+                <lightning-combobox
+                    label="Status"
+                    value={status}
+                    options={statusOptions}
+                    onchange={handleStatusChange}>
+                </lightning-combobox>
+            </div>
+
+            <div class="slds-col">
+                <lightning-input
+                    type="date"
+                    label="Delivery Date"
+                    value={deliveryDate}
+                    onchange={handleDateChange}>
+                </lightning-input>
+            </div>
+
+            <div class="slds-col slds-align-bottom">
+                <lightning-button
+                    label="Search"
+                    variant="brand"
+                    onclick={loadBookings}>
+                </lightning-button>
+            </div>
+
+        </div>
+
+        <!-- BOOKINGS TABLE -->
+        <template if:true={bookings}>
+            <lightning-datatable
+                key-field="Id"
+                data={bookings}
+                columns={columns}
+                onrowaction={handleRowAction}>
+            </lightning-datatable>
+        </template>
+
+    </lightning-card>
+
+    <!-- BOOKING HISTORY -->
+    <template if:true={selectedBookingId}>
+        <c-booking-history
+            booking-id={selectedBookingId}>
+        </c-booking-history>
+    </template>
+
+</template>

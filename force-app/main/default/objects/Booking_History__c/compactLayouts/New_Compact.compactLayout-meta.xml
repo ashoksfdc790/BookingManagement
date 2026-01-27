@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Compact</fullName>
+    <fields>Booking__c</fields>
+    <fields>Change_Date__c</fields>
+    <fields>Changed_By__c</fields>
+    <fields>CreatedById</fields>
+    <fields>Name</fields>
+    <fields>LastModifiedById</fields>
+    <fields>New_Value__c</fields>
+    <fields>Old_Value__c</fields>
+    <fields>OwnerId</fields>
+    <label>New Compact</label>
+</CompactLayout>
