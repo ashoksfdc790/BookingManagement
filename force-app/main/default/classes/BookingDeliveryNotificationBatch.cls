@@ -6,7 +6,7 @@ public class BookingDeliveryNotificationBatch implements Database.Batchable<SObj
                         'WHERE Delivery_Date__c = TODAY';
         return Database.getQueryLocator(query);
     }
-    
+    //test
     public void execute(Database.BatchableContext bc, List<Booking__c> scope) {
         List<Messaging.SingleEmailMessage> emails = new List<Messaging.SingleEmailMessage>();
         
